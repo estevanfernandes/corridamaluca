@@ -29,7 +29,7 @@ while True:
     tela.fill( branco )
     tela.blit(fundo, (0,0))
     tela.blit(carro1, (moveXcar1,posYcar1))
-    tela.blit(carro2, (moveXcar1,posYcar2))
+    tela.blit(carro2, (moveXcar2,posYcar2))
     
     if not acabou:
         moveXcar1 = moveXcar1 + random.randint(0,10)
@@ -47,7 +47,7 @@ while True:
     textoVermelho = fonte.render("Vermelho Ganhou!", True, branco)
     textoAmarelo = fonte.render("Amarelo Ganhou!", True, branco)
     
-    if posYcar1 == 480 and moveXcar1 >= 900 and moveXcar1 > moveXcar2:
+    if posYcar1 == 350 and moveXcar1 >= 900 and moveXcar1 > moveXcar2:
         tela.blit(textoVermelho, (240,70))
         acabou = True
         pygame.mixer.music.stop()
